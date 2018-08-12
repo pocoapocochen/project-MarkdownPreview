@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Work+Sans");
+* {
+  box-sizing: border-box; }
+
+html, body, #app, #container {
+  margin: 0;
+  padding: 0; }
+
+/*set container*/
+#wrap, .markdown_div {
+  display: flex;
+  flex-direction: column; }
+
+#wrap {
+  min-width: 20rem; }
+  #wrap .markdown_div {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; }
+
+/*tab part*/
+.tab_div {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 2.5rem;
+  border-radius: 1.25rem 1.25rem 0 0; }
+  .tab_div .tabicon, .tab_div .linkicon, .tab_div .buttonicon {
+    padding: 0.3125rem 0.625rem;
+    line-height: 1.875rem;
+    color: #ced3e3;
+    font-size: 1.25rem; }
+  .tab_div .tabicon {
+    margin-right: auto;
+    font-weight: bold; }
+  .tab_div .linkicon {
+    font-size: small; }
+  .tab_div .linkicon:hover {
+    text-decoration: underline; }
+  .tab_div a {
+    color: black;
+    text-decoration: none; }
+
+/*editor's tab*/
+#editortab_div {
+  background: #375170; }
+  #editortab_div .tabicon, #editortab_div .linkicon, #editortab_div .buttonicon {
+    color: #ced3e3; }
+  #editortab_div .buttonicon:hover {
+    color: #ffffff; }
+
+/*preview's tab*/
+#previewtab_div {
+  background: #ced3e3; }
+  #previewtab_div .tabicon, #previewtab_div .linkicon, #previewtab_div .buttonicon {
+    color: #375170; }
+  #previewtab_div .buttonicon:hover {
+    color: #000000; }
+
+/*editor and preview part*/
+#editor, #preview {
+  width: 90%;
+  height: 90%;
+  padding: 0.9375rem;
+  overflow: auto;
+  border-radius: 0 0 0 1.25rem;
+  box-shadow: 0.3125rem 0.3125rem 0.625rem #808080; }
+
+#editor {
+  resize: none;
+  outline: none;
+  line-height: 1.5;
+  color: #e2e2e8;
+  background: #101b2a;
+  font-family: 'Work Sans', sans-serif; }
+
+#preview {
+  padding-top: 0;
+  color: #101b2a;
+  background: #e2e2e8;
+  font-family: 'Fira Sans', sans-serif; }
+
+/*markdown style*/
+code {
+  background: #cccccc; }
+
+pre {
+  background: #cccccc; }
+
+blockquote {
+  padding-left: 0.75rem;
+  border-left: 0.1875rem solid black; }
+
+/*other part*/
+#copyright {
+  font-size: 0.75rem;
+  text-align: center; }
+  #copyright a {
+    text-decoration: none;
+    color: #000000; }
+
+@media (min-width: 50rem) {
+  #wrap {
+    flex-direction: row; }
+    #wrap .markdown_div {
+      width: 50%; }
+    #wrap .markdown_div:first-child {
+      align-items: flex-end;
+      padding-right: 1.875rem; }
+    #wrap .markdown_div:last-child {
+      align-items: flex-start;
+      padding-left: 1.875rem; }
+  .buttonicon {
+    display: none; } }
